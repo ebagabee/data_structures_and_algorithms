@@ -10,14 +10,12 @@
 # thre results of the merge_sort() calls (OK)
 
 def merge_sort(nums):
-    array = nums
+    if len(nums) < 2:
+        return nums
     
-    if len(array) < 2:
-        return array
-    
-    half_array = len(array) // 2
+    half_array = len(nums) // 2
 
-    first_half, second_half = array[:half_array], array[half_array:]
+    first_half, second_half = nums[:half_array], nums[half_array:]
 
     sorted_left_side = merge_sort(first_half)
     sorted_right_side = merge_sort(second_half)
@@ -28,7 +26,7 @@ def merge_sort(nums):
 
 # Inputs: A and B. Two Sorted lists of integers.
 
-# Create a new final list of integers.
+# Create a new final list of integers. 
 
 # Set i and j equal to zero. They will be used to keep track of indexes in
 # the input lists (A and B)
@@ -44,4 +42,26 @@ def merge_sort(nums):
 
 # Return the final list.
 def merge(first, second):
-    pass
+    final_list = []
+
+    i = 0
+    j = 0
+
+    while i < len(first) and j < len(second):
+        if first[i] <= second[j]:
+            final_list.append(first[i])
+            i += 1
+        else:
+            final_list.append(second[j])
+            j += 1
+
+    while i < len(first):
+        final_list.append(first[i])
+        i += 1
+
+    while j < len(second):
+        final_list.append(second[j])
+        j += 1
+
+    return final_list
+        
