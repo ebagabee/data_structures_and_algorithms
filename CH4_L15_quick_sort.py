@@ -58,7 +58,11 @@
     # [ ] Return i + 1 (the pivots new index)
 
 def quick_sort(nums, low, high):
-    pass
+    if low < high:
+        middle = partition(nums, low, high)
+
+        quick_sort(nums, low, middle - 1)
+        quick_sort(nums, middle + 1, high)
 
 
 def partition(nums, low, high):
