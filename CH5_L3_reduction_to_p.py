@@ -18,8 +18,8 @@ fib(8) -> 13
 
 Here are the implementation details to do it in polynomial time:
 
-1. The input [n] represents the index of the desired Fibonacci number.
-2. If [n] is less than or equal to 1, then return n
+1. The input [n] represents the index of the desired Fibonacci number. (OK)
+2. If [n] is less than or equal to 1, then return n (OK)
 3. Initialize three variables [grandparent = 0], [parent = 1], and a placeholder [current]
 to store the new Fibonacci number at each step.
 4. Write a loop that iterates [n - 1] times. (For example, if [n = 2], one iteration occurs.)
@@ -36,4 +36,14 @@ def fib(n):
     if n == 1:
         return 1
     
-    return fib(n - 1) + fib(n - 2)
+    grandparent = 0
+    parent = 1
+    current = 0
+
+    for _ in range(n - 1):
+        current = parent + grandparent
+        
+        grandparent = parent
+        parent = current
+
+    return current
