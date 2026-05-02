@@ -57,8 +57,27 @@ empty string to start (we need that one element to build on)
 '''
 
 def letter_combinations(digits):
-    pass
+    if digits == '':
+        return []
+    
+    result = [""]
 
+    for digit in digits:
+        if digit not in digit_to_letters:
+            raise ValueError(f"invalid digit: {digit}")
+
+        new_result = []
+
+        for combo in result:
+            for letter in digit_to_letters[digit]:
+                new_result.append(combo + letter)
+
+        result = new_result
+
+    return result
+
+
+# Don't touch below this line
 
 digit_to_letters = {
     "2": "abc",
