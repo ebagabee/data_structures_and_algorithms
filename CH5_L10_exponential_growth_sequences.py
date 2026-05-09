@@ -11,5 +11,14 @@ Example:
 result = [10, 20, 40, 80, 160]
 '''
 
-def exponential_grow(n, factor, days):
-    pass
+def exponential_growth(n, factor, days):
+    result = [n]
+    current_follower = n
+
+    for _ in range(0, days):
+        current = current_follower * factor
+        result.append(current)
+
+        current_follower = current
+    
+    return result
