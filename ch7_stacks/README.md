@@ -15,3 +15,21 @@ For now we'll just focus on two methods: `push` and `size`. Notice that the Stac
 2. Complete the size method. It should return the number of items in the stack.
 
 [Go to code](CH7_L1_stacks.py)
+
+```md
+A partir desse momento, comecei a escrever os assuntos em portugues, com o proposito de ajudar a pessoas que possam estudar a partir desse doc.
+```
+
+# Stack Review
+
+- Todas as operações suportadas são O(1) independentes. No entando, algumas tarefas, como acessar um item na parte inferior da pilha, tem complexidade de tempo maior porque exigem múltiplas `pop` operations.
+
+- As operations na pilha são limitadas: sem busca, sem ordenação, sem acesso aleatório.
+
+- Pilhas, assim como todos os tipos abstratos de dados, podem armazenar itens de qualquer tipo. O que define uma pilha eh o comportamento das operacoes, e nao o tipo de dado que ele armazena.
+
+- Pilhas sao frequentemente usadas no mundo real para:
+    - Gerenciamento de chamadas de funcao
+    - Funcionalidade de desfazer/refazer
+    - Avalicao de Expressao
+    - Historico do Navegador
