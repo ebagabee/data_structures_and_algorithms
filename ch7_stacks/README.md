@@ -33,3 +33,32 @@ A partir desse momento, comecei a escrever os assuntos em portugues, com o propo
     - Funcionalidade de desfazer/refazer
     - Avalicao de Expressao
     - Historico do Navegador
+
+# Using a Stack
+
+O LockedIn oferece suporte a uma linguagem de script basica. Isso permite que gerentes de RH com conhecimento tecnico escrevam scripts capazes de automatizar tarefas repetitivas na plataforma. A linguagem utiliza parenteses para agrupar operacoes, e precisamos verificar se os parenteses em um script estao balanceados.
+
+## Parenteses balanceados
+
+Os parenteses estao balanceados quando cada parentese possui um parentese correspondente e os pares de parenteses estao devidamente aninhados. Por exemplo:
+
+- ()
+- ()()
+- ((()))
+- (()(()))
+
+## Parenteses desequilibrados
+
+- (
+- ())
+- (()()
+- (()))
+- )(
+
+## Assignment
+
+Conclua a `is_balanced`
+
+A funcao recebe uma string como entrada e retorna verdade `True` se os parenteses na string estiverem balanceados, e `False` case contrario. Utilize uma instancia da Stack fornecida `stack.py` para controlar os parenteses.
+
+[Va para o Codigo](CH7_L7_using_a_stack/main.py)
