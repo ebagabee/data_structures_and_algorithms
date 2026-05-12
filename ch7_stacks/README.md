@@ -16,38 +16,34 @@ For now we'll just focus on two methods: `push` and `size`. Notice that the Stac
 
 [Go to code](CH7_L1_stacks.py)
 
-```md
-A partir desse momento, comecei a escrever os assuntos em portugues, com o proposito de ajudar a pessoas que possam estudar a partir desse doc.
-```
-
 # Stack Review
 
-- Todas as operações suportadas são O(1) independentes. No entando, algumas tarefas, como acessar um item na parte inferior da pilha, tem complexidade de tempo maior porque exigem múltiplas `pop` operations.
+- All supported operations are independent O(1). However, some tasks, such as accessing an item at the bottom of the stack, have higher time complexity because they require multiple `pop` operations.
 
-- As operations na pilha são limitadas: sem busca, sem ordenação, sem acesso aleatório.
+- Stack operations are limited: no searching, no sorting, no random access.
 
-- Pilhas, assim como todos os tipos abstratos de dados, podem armazenar itens de qualquer tipo. O que define uma pilha eh o comportamento das operacoes, e nao o tipo de dado que ele armazena.
+- Stacks, like all abstract data types, can store items of any type. What defines a stack is the behavior of its operations, not the type of data it stores.
 
-- Pilhas sao frequentemente usadas no mundo real para:
-    - Gerenciamento de chamadas de funcao
-    - Funcionalidade de desfazer/refazer
-    - Avalicao de Expressao
-    - Historico do Navegador
+- Stacks are frequently used in the real world for:
+    - Function call management
+    - Undo/redo functionality
+    - Expression evaluation
+    - Browser history
 
 # Using a Stack
 
-O LockedIn oferece suporte a uma linguagem de script basica. Isso permite que gerentes de RH com conhecimento tecnico escrevam scripts capazes de automatizar tarefas repetitivas na plataforma. A linguagem utiliza parenteses para agrupar operacoes, e precisamos verificar se os parenteses em um script estao balanceados.
+LockedIn supports a basic scripting language. This allows technically savvy HR managers to write scripts that automate repetitive tasks on the platform. The language uses parentheses to group operations, and we need to verify whether the parentheses in a script are balanced.
 
-## Parenteses balanceados
+## Balanced parentheses
 
-Os parenteses estao balanceados quando cada parentese possui um parentese correspondente e os pares de parenteses estao devidamente aninhados. Por exemplo:
+Parentheses are balanced when each opening parenthesis has a matching closing one and the pairs are properly nested. For example:
 
 - ()
 - ()()
 - ((()))
 - (()(()))
 
-## Parenteses desequilibrados
+## Unbalanced parentheses
 
 - (
 - ())
@@ -57,8 +53,8 @@ Os parenteses estao balanceados quando cada parentese possui um parentese corres
 
 ## Assignment
 
-Conclua a `is_balanced`
+Complete the `is_balanced` function.
 
-A funcao recebe uma string como entrada e retorna verdade `True` se os parenteses na string estiverem balanceados, e `False` case contrario. Utilize uma instancia da Stack fornecida `stack.py` para controlar os parenteses.
+The function takes a string as input and returns `True` if the parentheses in the string are balanced, and `False` otherwise. Use an instance of the Stack provided in `stack.py` to track the parentheses.
 
-[Va para o Codigo](CH7_L7_using_a_stack/main.py)
+[Go to code](CH7_L7_using_a_stack/main.py)
